@@ -10,8 +10,12 @@ struct Server{
 	unsigned long interface;
 	int port;
 	int backlog;
+	
 	struct sockaddr_in address;
-	void (*launch)(void);
+	
+	int socket;
+	
+	void (*launch)(struct Server *server);
 };
 struct Server server_constructor(int domain, int service, int protocol, unsigned lon interface, int port, int backlog, void(*launch)(void));
 
