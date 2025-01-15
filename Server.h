@@ -17,7 +17,7 @@ struct Server{
 	
 	void (*launch)(struct Server *server);
 };
-struct Server server_constructor(int domain, int service, int protocol, unsigned lon interface, int port, int backlog, void(*launch)(void));
+struct Server server_constructor(int domain, int service, int protocol, unsigned long interface, int port, int backlog, void(*launch)(void));
 
 
 #endif
